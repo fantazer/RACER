@@ -1,3 +1,22 @@
 mixin header()
 	//block header
+	.header
+		.main-cont
+			.header-wrap
+				a(href="/").logo
+					img(src="img/logo.png", alt="")
+				.menu
+					a(href="#").menu__el.menu__el--active Главная
+					a(href="#").menu__el Каталог
+					a(href="#").menu__el Дилеры
+					a(href="#").menu__el Где купить
+				.head-toggle
+					+icon("menu","icon icon-open")
+					+icon("close","icon icon-close")
+				.slide-menu
+					.slide-menu__list
+						a(href="#").slide-menu__list-el Главная
+						a(href="#").slide-menu__list-el Каталог
+						a(href="#").slide-menu__list-el Дилеры
+						a(href="#").slide-menu__list-el Где купить
 	//block header end

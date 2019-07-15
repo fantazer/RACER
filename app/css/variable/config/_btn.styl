@@ -18,7 +18,7 @@
 .btn--md
 	@extend .btn
 	font-size 15px
-	padding 20px 45px
+	padding 15px 45px
 
 .btn--lg
 	@extend .btn
@@ -38,13 +38,29 @@
 	.nav-icon
 		fill white
 	&:hover
-		background-color darken($mark,20)
+		background-color lighten($mark,20)
 	&:active
-		background-color darken($mark,20)
+		background-color lighten($mark,20)
 	input[type="submit"]
 		border 0
 	.nav-icon
 		fill white
+
+.btn--red
+	@extend .btn
+	color white
+	background $red
+	.nav-icon
+		fill white
+	&:hover
+		background-color darken($red,10)
+	&:active
+		background-color darken($red,10)
+	input[type="submit"]
+		border 0
+	.nav-icon
+		fill white
+
 
 .btn--disable
 	@extend .disabled
@@ -68,6 +84,22 @@
 	.nav-icon
 		fill rgba(255, 255, 255, 0.9)
 
+.btn--dark
+	@extend .btn
+	color white
+	background black
+	.nav-icon
+		fill white
+	&:hover
+		background-color lighten(black,20)
+	&:active
+		background-color lighten(black,20)
+	input[type="submit"]
+		border 0
+	.nav-icon
+		fill white
+
+
 .btn--icon
 	flex(mid)
 
@@ -80,4 +112,6 @@
 
 .nav-icon--right
 	margin-rihgt 10px
+
+
 

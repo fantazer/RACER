@@ -4,9 +4,12 @@
 //Add fotn rub write .rub a - (a,b,c,d - change type font)
 
 //font(name,file,size)
-//font('Rubik','Rubik-Regular',400)
 
-$v-font =  'Roboto', sans-serif
+font('Roboto','RobotoCondensed-Light',300)
+font('Roboto','RobotoCondensed-Regular',400)
+font('Roboto','RobotoCondensed-Bold',700)
+
+$v-font =  'verdana', sans-serif
 
 typeSize(fontSm,font)
 	+below(768px)
@@ -14,53 +17,59 @@ typeSize(fontSm,font)
 	font-size fontSm px
 
 /*
-font-size 14px
+font-size 12px
 @extend .type--sm
 
-font-size 20px
+font-size 14px
 @extend .type--main
 
-font-size 24px
+font-size 16px
 @extend .type--md
 
-font-size 30px
+font-size 18px
 @extend .type--lg
 
-font-size 40px
+font-size 30px
 @extend .type--xl
+
+font-size 36px
+@extend .type--xxl
 */
 
 .type--xs
 	typeSize(12,10)
 
 .type--sm
-	typeSize(14,12)
+	typeSize(12,12)
 
 .type--main
-	typeSize(16,14)
+	typeSize(14,12)
 
 .type--md
-	typeSize(18,15)
+	typeSize(16,14)
 
 .type--lg
-	typeSize(26,18)
+	typeSize(18,16)
 
 .type--xl
-	typeSize(36,20)
+	typeSize(30,24)
+
+.type--xxl
+	typeSize(36,28)
 
 .type--bold
 	font-weight bold
 
 h1
-	@extend .type--xl
+	@extend .type--xxl
 h2
-	@extend .type--lg
+	@extend .type--xl
 h3
-	@extend .type--main
+	@extend .type--lg
 h4
-	@extend .type--sm
+	@extend .type--md
 h5
-	@extend .type--xs
+	@extend .type--main
 
 a
 	color $link-color
@@ -70,8 +79,8 @@ a
 	&:visiter
 		color darken($link-color,30)
 
-p
-	@extend .type--main
+p,li
+	line-height: 1.6
 
 .link--mark
 	color $blue

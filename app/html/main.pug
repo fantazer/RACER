@@ -1,7 +1,82 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
+.page
+	.header-main-page
+		+header()
 
-+footer()
+	.content
+		//banner
+		.main-banner(style="background-image:url('img/banner.jpg')")
+			.main-banner-wrap
+				img(src="img/slogan.png", alt="")
+
+		// advant
+		.advant-cont
+			.advant
+				.advant__el
+					.advant__el-icon
+						img(src="img/temperature.png", alt="")
+					.advant__el-title температурные перепады
+					.advant__el-text Выдерживают температурные перепады от -30 до +40 градусов
+				.advant__el
+					.advant__el-icon
+						img(src="img/car-insurance.png", alt="")
+					.advant__el-title Надежность
+					.advant__el-text Пусковой ток и производительность увеличены на 15%
+				.advant__el
+					.advant__el-icon
+						img(src="img/battery.png", alt="")
+					.advant__el-title Индикатор заряженности
+					.advant__el-text На корпусе есть индикатор уровня заряда для простого визуального контроля
+				.advant__el
+					.advant__el-icon
+						img(src="img/hammer.png", alt="")
+					.advant__el-title Удароустойчивость
+					.advant__el-text Устойчивы к вибрациями во время эксплуатации автомобиля и ударам
+
+		//description
+		.section
+			.main-cont
+				.section-title  Аккумуляторы Racer
+				p Надёжные батареи производства АО «АКОМ». Отлично подойдут для отечественных и Иностранных авто.
+				p «АКОМ» является неизменным лидером на рынке СНГ по объемам производства аккумуляторов, крупнейшим поставщиком на конвейеры мировых автопроизводителей в России, обеспечивает свыше 70% экспорта в отрасли. Каждый второй автомобиль, произведенный в стране, сходит с конвейера на аккумуляторе завода «АКОМ». Отправим прайс-лист на ваш e-mail
+
+		//subscribe
+		.subscribe-wrap
+			.main-cont
+				.subscribe
+					.subscribe-title Отправим прайс-лист на ваш e-mail
+					form(action="#")
+						.subscribe-form
+							input(type="text" placeholder="Введите Ваш e-mail*" class="input")
+							input(type="submit" value="Я хочу прайс-лист" class="subscribe-form__get")
+
+		//flag
+		.flag
+			.main-cont
+				img(src="img/flags.png", alt="")
+
+		//filter
+		.filter-wrap
+			.filter-bg
+				img(src="img/tires.png", alt="")
+			.main-cont
+				.filter__title Подбор акб cene по марке автомобиля
+				.filter-list
+					- var items = ['Марка','Модель','Год','Двигатель'];
+					each item in items
+						.filter-el
+							.filter-el__name #{item}
+							.filter-el__select
+								select.select-beauty
+									option(data-display="Веберите из списка") не выбрано
+									option корпус 1
+									option корпус 2
+									option корпус 3
+				.filter-footer
+					.filter-info * Подбор по марке автомобиля носит предварительный характер. Оптимальный вариант уточняйте непосредственно у продовцов в магазине.
+					.filter-get Подобрать акб
+
+		+footer()
 include ./block_html/_script.pug
